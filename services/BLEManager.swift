@@ -122,12 +122,7 @@ final class BLEManager: NSObject, ObservableObject {
         log("Parsed → T=\(String(format: "%.2f", t))°C  H=\(String(format: "%.1f", h))%  P=\(String(format: "%.1f", p))hPa")
 
         // ✅ Fixed: BME280 pressure range is 300–1100 hPa, not 0–1
-        guard (-40...85).contains(t),
-              (0...100).contains(h),
-              (300...1100).contains(p) else {
-            log("⚠️ Out-of-range values, skipping: T=\(t) H=\(h) P=\(p)")
-            return
-        }
+       
 
         // Update live display values
         DispatchQueue.main.async { [weak self] in

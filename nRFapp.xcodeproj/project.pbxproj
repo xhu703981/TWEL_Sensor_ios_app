@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E6988F8B2E7C6B83000DF566 /* BLEManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E60313512E7BA8E3007A0D43 /* BLEManager.swift */; };
+		E69EBE862F4545E70042EBEE /* Sessionmanager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69EBE852F4545E70042EBEE /* Sessionmanager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +33,7 @@
 		E60313262E74A977007A0D43 /* nRFappTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = nRFappTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E60313302E74A977007A0D43 /* nRFappUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = nRFappUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E60313512E7BA8E3007A0D43 /* BLEManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEManager.swift; sourceTree = "<group>"; };
+		E69EBE852F4545E70042EBEE /* Sessionmanager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sessionmanager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -126,6 +128,7 @@
 		E60313502E7BA8AE007A0D43 /* services */ = {
 			isa = PBXGroup;
 			children = (
+				E69EBE852F4545E70042EBEE /* Sessionmanager.swift */,
 				E60313512E7BA8E3007A0D43 /* BLEManager.swift */,
 			);
 			path = services;
@@ -278,6 +281,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E6988F8B2E7C6B83000DF566 /* BLEManager.swift in Sources */,
+				E69EBE862F4545E70042EBEE /* Sessionmanager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
