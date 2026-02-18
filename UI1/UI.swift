@@ -175,7 +175,7 @@ struct MetricCard: View {
                 Text(unit).font(.caption).foregroundColor(.secondary)
             }
             if let note = note {
-                Text(note).font(.caption2).foregroundColor(.tertiary)
+                Text(note).font(.caption2).foregroundColor(Color.secondary.opacity(0.6))
             }
         }
         .frame(maxWidth: .infinity, alignment: .leading)
