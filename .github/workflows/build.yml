@@ -16,8 +16,23 @@ jobs:
         xcodebuild \
           -project nRFapp.xcodeproj \
           -scheme nRFapp \
-          -sdk iphonesimulator \
+          -sdk iphoneos \
           -configuration Debug \
           CODE_SIGN_IDENTITY="" \
           CODE_SIGNING_REQUIRED=NO \
-          build
+          CODE_SIGNING_ALLOWED=NO \
+          ONLY_ACTIVE_ARCH=NO \
+          build \
+          CONFIGURATION_BUILD_DIR=./build
+
+    - name: Package IPA
+      run: |
+        mkdir -p Payload
+        cp -r ./build/nRFapp.app Payload/
+        zip -r nRFapp.ipa Payload
+
+    - name: Upload IPA
+      uses: actions/upload-artifact@v3
+      with:
+        name: nRFapp
+        path: nRFapp.ipa
